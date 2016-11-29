@@ -3,12 +3,9 @@ FROM ubuntu
 # File Author / Maintainer
 MAINTAINER andrewyang96@gmail.com
 
-# Install Python Setuptools
-RUN apt-get update -y
-RUN apt-get install -y python-setuptools
-
 # Install pip
-RUN easy_install pip
+RUN apt-get update -y
+RUN apt-get install -y python-pip
 
 # Add and install Python modules
 ADD requirements.txt /src/requirements.txt
