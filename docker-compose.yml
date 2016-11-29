@@ -1,9 +1,9 @@
 greetings:
   build: ./greetings
   ports:
-    - "5000"
+    - "5000:5000"
 
 mathmachine:
   build: ./mathmachine
   ports:
-    - "5001"
+    - "5001:5001"
