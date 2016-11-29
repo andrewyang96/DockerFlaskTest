@@ -4,6 +4,7 @@ FROM ubuntu
 MAINTAINER andrewyang96@gmail.com
 
 # Install Python Setuptools
+RUN apt-get update -y
 RUN apt-get install -y python-setuptools
 
 # Install pip
