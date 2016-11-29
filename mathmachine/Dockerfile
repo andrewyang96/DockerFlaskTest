@@ -12,7 +12,7 @@ ADD requirements.txt /src/requirements.txt
 RUN cd /src; pip install -r requirements.txt
 
 # Bundle app source
-ADD ./app /src
+ADD . /src
 
 # Expose port
 EXPOSE 5001
