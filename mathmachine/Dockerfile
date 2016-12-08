@@ -13,9 +13,10 @@ RUN cd /src; pip install -r requirements.txt
 
 # Bundle app source
 ADD . /src
+WORKDIR /src
 
 # Expose port
 EXPOSE 5001
 
 # Run
-CMD ["python", "/src/app.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:5001", "app:app"]
